@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --amber-brand: #854F0B;
+  --amber-light: #FAEEDA;
+  --amber-mid: #EF9F27;
+  --green-trust: #27500A;
+  --green-light: #EAF3DE;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 999px; }
+
+*:focus-visible { outline: 2px solid #854F0B; outline-offset: 2px; border-radius: 4px; }
+
+@keyframes pricePulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+.price-live { animation: pricePulse 3s ease-in-out infinite; }
+
+@keyframes slideUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.animate-slide-up { animation: slideUp 0.2s ease-out; }
+
+.trust-bar-owner     { background: linear-gradient(90deg, #27500A, #639922); }
+.trust-bar-confirmed { background: linear-gradient(90deg, #085041, #1D9E75); }
+.trust-bar-single    { background: #9ca3af; }
+.trust-bar-disputed  { background: linear-gradient(90deg, #854F0B, #EF9F27); }
+.trust-bar-stale     { background: #d1d5db; }
