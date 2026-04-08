@@ -13,6 +13,8 @@ export interface Station {
   brand: string
   area: string
   address: string
+  province: string
+  highway: string | null
   lat: number
   lng: number
   dist: number
@@ -29,7 +31,6 @@ export interface Station {
     low: Partial<Record<FuelType, number>>
     high: Partial<Record<FuelType, number>>
   }
-  phone?: string
 }
 
 export interface VehicleProfile {
